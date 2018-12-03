@@ -1,0 +1,237 @@
+@import url("font.css");
+@import url("screen.css");
+@import url("mobile.css");
+
+:root {
+    --padding : 20px;
+    --btnColor: #333;
+    --hoverColor: #222;
+    --activeColor: #111;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:#fafafc;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+}
+
+header .top_title {
+    margin : 48px 20px 24px 20px;
+    padding-left : var(--padding);
+    color: #4b4b4b;
+}
+
+.top__list {
+    padding: 0 var(--padding);
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 40px;
+    margin:0 20px 40px 20px;
+}
+
+.top__list .list__function {
+    display: grid;
+    grid-template-rows: 3fr , 1fr;
+    grid-gap: 12px;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    transition: opacity 0.15 linear;
+    opacity: 1;
+}
+
+.list__function .function_ui {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color:#fff;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.16);
+    transition:box-shadow 0.15s linear;
+    cursor: pointer;
+}
+
+.top__list:hover .list__function{
+    opacity: 0.7;
+}
+
+.top__list .list__function:hover {
+    opacity: 1;
+}
+
+.top__list .list__function:active {
+    opacity: 0.8;
+}
+
+.list__function:hover .function_ui {
+    box-shadow:0px 1px 2px rgba(0,0,0,0.24);
+    opacity: 1;
+}
+
+.list__function .function_name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4b4b4b;  
+}
+
+.featured {
+    margin: 0px 8px;
+    border-top: 1px solid #ccc;
+    
+}
+
+.featured .featured__title {
+    padding-left : var(--padding);
+    margin : 24px 0;
+    display: inline-block;
+    color: #4b4b4b;
+    font-size: 20px;
+}
+
+.featured .featured__itemWrap {
+    margin : 0 8px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+    overflow:scroll;
+}
+
+.featured .featured__item {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    background-color: #b4b4b4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: var(--padding);
+    cursor:pointer;
+}
+
+.featured__item .item_title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.featured__item .item_btn {
+    width: 32px;
+    height: 24px;
+    font-size: 15px;
+    color: #4b4b4b;
+    position: relative;
+    top:3px;
+    border:none;
+    z-index: 1000;
+}
+
+.featured__item:first-child {
+    background-image: url(https://www.archanaskitchen.com/images/archanaskitchen/World_Pastas_Pizzas/Penne_with_Creamy_Pumpkin_Sauce_Recipe_with_Broccoli-1.jpg);
+    background-size:cover;
+}
+
+.featured__item:nth-child(2) {
+    background-image: url(https://food-images.files.bbci.co.uk/food/recipes/alpine_pizza_32132_16x9.jpg);
+    background-size:cover;
+}
+
+.featured__item:nth-child(3) {
+    background-image: url(https://www.archanaskitchen.com/images/archanaskitchen/World_Pastas_Pizzas/Penne_with_Creamy_Pumpkin_Sauce_Recipe_with_Broccoli-1.jpg);
+    background-size:cover;
+}
+
+.featured__item:nth-child(4) {
+    background-image: url(https://food-images.files.bbci.co.uk/food/recipes/alpine_pizza_32132_16x9.jpg);
+    background-size:cover;
+}
+
+.food{
+    border-top: 1px solid #ccc;
+    margin:24px 8px;
+}
+
+.food .food__list {
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food__list .list_name {
+    font-size:14px;
+    font-weight: 500;
+    color:#333;
+} 
+
+.food__list .list_btn {
+    width:32px;
+    height: 24px;
+    border:none;
+    background-color:var(--btnColor);
+    color:#fff;
+}
+
+.food__list .list_btn:hover {
+    background-color:var(--hoverColor);
+    color:#eee;
+}
+
+.food__list .list_btn:active {
+    background-color:var(--activeColor);
+    color:#ddd;
+}
+
+.bottom {
+    border-top:1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height: 64px;
+    background-color:#ddd;
+}
+
+.bottom .fotter_list{
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.fotter_list .list_ui {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--btnColor);
+    color:#fff;
+    text-align: center;
+    line-height: 32px;
+}
+
+.fotter_list .list_ui:hover {
+    background-color: var(--hoverColor);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.24);
+    transition: box-shadow ease 0.3s;
+}
+
+.fotter_list .list_ui:active {
+    background-color: var(--activeColor);
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    transition: box-shadow ease 0.3s;
+}
+
+.fotter_list .list_uiName {
+    padding:4px; 
+    font-size: 10px;
+}
